@@ -1,0 +1,59 @@
+<div class="form-group  p-4">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card text-center">
+        <div class="card-head  ">
+          <h2>formulario</h2>
+          <SPAN>componente padre</SPAN>
+        </div>
+        <hr />
+
+        <div class="card-body">
+          <h4>Name</h4>
+          <input
+            (input)="name = $event.target.value"
+            type="text"
+            #titulo
+            class="form-control  mt-2"
+            placeholder="Name: "
+            required
+          />
+          <h4>First Surname</h4>
+          <input
+            (input)="firstSurname = $event.target.value"
+            type="text"
+            class="form-control  mt-2"
+            placeholder="Fist Surname:"
+            required
+          />
+          <h4>Second Surname</h4>
+          <input
+            (input)="secondSurname = $event.target.value"
+            type="text"
+            #titulo
+            class="form-control mt-2"
+            placeholder="Second Surname: "
+            required
+          />
+          <h4>Home</h4>
+          <input
+            (input)="home = $event.target.value"
+            type="text"
+            #titulo
+            class="form-control  mt-2"
+            placeholder="Home: "
+            required
+          />
+        </div>
+        <button class="btn btn-primary" (click)="Rename()">Country</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--[user]="user" -->
+<app-son
+  [name]="name"
+  [firstSurname]="firstSurname"
+  [secondSurname]="secondSurname"
+  [home]="home"
+></app-son>
